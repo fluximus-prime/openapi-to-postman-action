@@ -1,7 +1,7 @@
 {
   "name": "publish-open-api-spec-to-postman",
   "version": "v1.1",
-  "description": "See also: [loopDelicious/converter](https://github.com/loopDelicious/converter)",
+  "description": "Publish OpenAPI spec to Postman action",
   "main": "index.js",
   "dependencies": {
     "@actions/core": "^1.9.0",
@@ -11,12 +11,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/diegosanteri/publish-open-api-spec-to-postman.git"
+    "url": "git+https://github.com/Monument-Software-Inc/publish-open-api-spec-to-postman.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/diegosanteri/publish-open-api-spec-to-postman/issues"
+    "url": "https://github.com/Monument-Software-Inc/publish-open-api-spec-to-postman/issues"
   },
-  "homepage": "https://github.com/diegosanteri/publish-open-api-spec-to-postman#readme"
+  "homepage": "https://github.com/Monument-Software-Inc/publish-open-api-spec-to-postman#readme"
 }

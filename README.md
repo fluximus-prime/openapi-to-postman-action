@@ -20,11 +20,11 @@ jobs:
   sync:
     runs-on: ubuntu-latest
     steps:
-      - uses: diegosanteri/publish-open-api-spec-to-postman@v1
+      - uses: Monument-Software-Inc/publish-open-api-spec-to-postman@v1
         with:
           postmanApiKey: ${{ secrets.POSTMAN_API_KEY }}
           postmanCollectionid: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
-          swaggerPath: (swagger.json) or (url address)
+          openApiSpec: (swagger.json) or (url address)
 ```
 
 Done!
