@@ -18,6 +18,6 @@ inputs: # user can input the name inside the name of user variable , description
     required: true
     default: 'String'
 runs: 
-  using: 'node18'
+  using: 'node16'
   main: 'dist/index.js'
 
