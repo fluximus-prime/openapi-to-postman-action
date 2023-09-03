@@ -5,8 +5,8 @@ branding:
   icon: arrow-up-circle
   color: blue
 inputs: # user can input the name inside the name of user variable , descriptions etc
-  postmanCollectionId:
-    description: 'Postman Collection id'
+  postmanCollectionUid:
+    description: 'Postman Collection UID'
     required: true
     default: 'String'
   postmanApiKey:
