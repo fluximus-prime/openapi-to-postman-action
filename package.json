@@ -1,7 +1,7 @@
 {
-  "name": "publish-open-api-spec-to-postman",
+  "name": "openapi-to-postman-action",
   "version": "v1.1",
-  "description": "Publish OpenAPI spec to Postman action",
+  "description": "Publish OpenAPI Specification (OAS) to Postman Collection",
   "main": "index.js",
   "dependencies": {
     "@actions/core": "^1.9.0",
@@ -11,12 +11,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Monument-Software-Inc/publish-open-api-spec-to-postman.git"
+    "url": "git+https://github.com/fluximus-prime/openapi-to-postman-action.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Monument-Software-Inc/publish-open-api-spec-to-postman/issues"
+    "url": "https://github.com/fluximus-prime/openapi-to-postman-action/issues"
   },
-  "homepage": "https://github.com/Monument-Software-Inc/publish-open-api-spec-to-postman#readme"
+  "homepage": "https://github.com/fluximus-prime/openapi-to-postman-action#readme"
 }

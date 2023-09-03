@@ -1,11 +1,11 @@
-name: publish-open-api-to-postman
-description: "Action responsible for Publish and sync open api specification to postman"
-author: Diego Conti Santeri Tonini <diegosanteri@gmail.com>
+name: openapi-to-postman-action
+description: Publish OpenAPI Specification (OAS) to Postman Collection
+author: Diego Conti Santeri Tonini <diegosanteri@gmail.com>, Hans Chun <hanschun>, fluximus-prime
 branding:
   icon: arrow-up-circle
   color: blue
 inputs: # user can input the name inside the name of user variable , descriptions etc
-  postmanCollectionid:
+  postmanCollectionId:
     description: 'Postman Collection id'
     required: true
     default: 'String'

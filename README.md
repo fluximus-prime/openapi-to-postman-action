@@ -1,4 +1,4 @@
-## Publish Open Api Spec to Postman collection
+## Publish OpenAPI Specification (OAS) to Postman Collection
 
 In order to use this library you first need to [generate a Postman API token](https://www.postman.com/) and [add it as a secret to your repo](https://docs.github.com/en/actions/reference/encrypted-secrets)
 
@@ -20,10 +20,10 @@ jobs:
   sync:
     runs-on: ubuntu-latest
     steps:
-      - uses: Monument-Software-Inc/publish-open-api-spec-to-postman@v1
+      - uses: fluximus-prime/openapi-to-postman-action@v1
         with:
           postmanApiKey: ${{ secrets.POSTMAN_API_KEY }}
-          postmanCollectionid: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
+          postmanCollectionId: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
           openApiSpec: (swagger.json) or (url address)
 ```
 
