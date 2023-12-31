@@ -125,3 +125,6 @@ out
 .yarn/install-state.gz
 .pnp.*
 Footer
+
+# Jetbrains
+.idea
