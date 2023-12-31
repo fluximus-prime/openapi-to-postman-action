@@ -1,6 +1,6 @@
 {
   "name": "openapi-to-postman-action",
-  "version": "v1.1",
+  "version": "v2.0",
   "description": "Publish OpenAPI Specification (OAS) to Postman Collection",
   "main": "index.js",
   "dependencies": {
