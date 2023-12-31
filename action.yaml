@@ -1,6 +1,6 @@
 name: openapi-to-postman-action
 description: Publish OpenAPI Specification (OAS) to Postman Collection
-author: Diego Conti Santeri Tonini <diegosanteri@gmail.com>, Hans Chun <hanschun>, fluximus-prime
+author: Diego Conti Santeri Tonini <diegosanteri@gmail.com>, Hans Chun <hanschun>, Fluximus, Inc.
 branding:
   icon: arrow-up-circle
   color: blue
