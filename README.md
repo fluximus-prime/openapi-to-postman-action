@@ -20,7 +20,7 @@ jobs:
   sync:
     runs-on: ubuntu-latest
     steps:
-      - uses: fluximus-prime/openapi-to-postman-action@v1
+      - uses: fluximus-prime/openapi-to-postman-action@v2
         with:
           postmanApiKey: ${{ secrets.POSTMAN_API_KEY }}
           postmanCollectionUid: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx

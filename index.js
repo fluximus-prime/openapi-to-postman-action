@@ -16,7 +16,7 @@ const convertToPostman = async (openapiData, options) => {
 
   return new Promise((resolve, reject) => {
     converter.convert({ type: 'string', data: openapiData },
-      { options }, (err, conversionResult) => {
+        options, (err, conversionResult) => {
         if(err || 
           !conversionResult.result || 
           !conversionResult.output || 
@@ -44,7 +44,12 @@ const update = async () => {
     const postmanApiKey = core.getInput('postmanApiKey');
     const postmanCollectionUid = core.getInput('postmanCollectionUid');
     const openApiSpec = core.getInput('openApiSpec');
-    const options = core.getMultilineInput('options').join(',');
+
+    const options = {}
+    core.getMultilineInput('options').map(x => {
+        let v = x.replace(/['"]+/g, '').replace(/ /g,'').split(':')
+        options[v[0].trim()] = v[1].trim()
+    });
 
     const isUrl = (openApiSpec.startsWith("https") || openApiSpec.startsWith("http"));
     const openapiData = isUrl ? await getSpecFromUrl(openApiSpec) : getSpecFromFile(openApiSpec);
