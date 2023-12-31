@@ -46,7 +46,7 @@ const update = async () => {
     const openApiSpec = core.getInput('openApiSpec');
 
     const isUrl = (openApiSpec.startsWith("https") || openApiSpec.startsWith("http"));
-    const openapiData = isUrl ? await getSpecFromUrl(openApiSpec) : getSpecFromFile(openApiSpec);
+    const openapiData = isUrl ? await getSpecFromUrl(openApiSpec) : getSpecFromFile(openApiSpec);
     const postmanCollection = await convertToPostman(openapiData);
 
     await publish(postmanCollectionUid, postmanCollection, postmanApiKey);
