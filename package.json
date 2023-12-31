@@ -1,12 +1,15 @@
 {
   "name": "openapi-to-postman-action",
-  "version": "v2.0",
+  "version": "v2",
   "description": "Publish OpenAPI Specification (OAS) to Postman Collection",
   "main": "index.js",
   "dependencies": {
     "@actions/core": "^1",
     "@actions/github": "^6",
+    "@vercel/ncc": "^0.38.1",
+    "@zeit/ncc": "^0.22.3",
     "axios": "^1",
+    "ncc": "^0.3.6",
     "openapi-to-postmanv2": "^4"
   },
   "repository": {
