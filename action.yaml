@@ -17,6 +17,9 @@ inputs: # user can input the name inside the name of user variable , description
     description: 'It can be an url or the file'
     required: true
     default: 'String'
+  options:
+    description: 'Optional parameters to control the converter behavior'
+    required: false
 runs: 
   using: 'node20'
   main: 'dist/index.js'
