@@ -12,11 +12,11 @@ const getSpecFromFile = (path) => {
   return fs.readFileSync(path, {encoding: 'UTF8'});
 }
 
-const convertToPostman = async (openapiData) => {
+const convertToPostman = async (openapiData, options) => {
 
   return new Promise((resolve, reject) => {
     converter.convert({ type: 'string', data: openapiData },
-      {}, (err, conversionResult) => {
+      { options }, (err, conversionResult) => {
         if(err || 
           !conversionResult.result || 
           !conversionResult.output || 
@@ -44,10 +44,11 @@ const update = async () => {
     const postmanApiKey = core.getInput('postmanApiKey');
     const postmanCollectionUid = core.getInput('postmanCollectionUid');
     const openApiSpec = core.getInput('openApiSpec');
+    const options = core.getMultilineInput('options').join(',');
 
     const isUrl = (openApiSpec.startsWith("https") || openApiSpec.startsWith("http"));
     const openapiData = isUrl ? await getSpecFromUrl(openApiSpec) : getSpecFromFile(openApiSpec);
-    const postmanCollection = await convertToPostman(openapiData);
+    const postmanCollection = await convertToPostman(openapiData, options);
 
     await publish(postmanCollectionUid, postmanCollection, postmanApiKey);
   } catch (e) {

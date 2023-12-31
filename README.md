@@ -25,6 +25,14 @@ jobs:
           postmanApiKey: ${{ secrets.POSTMAN_API_KEY }}
           postmanCollectionUid: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
           openApiSpec: (swagger.json) or (url address)
+          options: |
+            alwaysInheritAuthentication: true
+            exampleParametersResolution: 'Example'
+            folderStrategy: 'Paths'
+            parametersResolution: 'Schema'
 ```
+Note: The `options` list must be a multi-line string, as shown above. See [Actions Toolkit #184](https://github.com/actions/toolkit/issues/184#issuecomment-1198653452) and [Actions Toolkit #829](https://github.com/actions/toolkit/pull/829) for reasoning.
+
+Note: All possible values of `options` and their usage can be found over here: [OPTIONS.md](https://github.com/postmanlabs/openapi-to-postman/blob/develop/OPTIONS.md).
 
 Done!
