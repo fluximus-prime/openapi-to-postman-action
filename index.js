@@ -46,9 +46,15 @@ const update = async () => {
     const openApiSpec = core.getInput('openApiSpec');
 
     const options = {}
-    core.getMultilineInput('options').map(x => {
-        let v = x.replace(/['"]+/g, '').replace(/ /g,'').split(':')
-        options[v[0].trim()] = v[1].trim()
+    core.getMultilineInput('options').forEach(line => {
+        const [key, value] = line
+            .replace(/['"]+/g, '')
+            .replace(/ /g,'')
+            .split(':')
+            .map(part => part.trim());
+        // convert to object literal, we don't want json here
+        // we only need to worry about strings and booleans
+        options[key] = value === 'true' ? true : value === 'false' ? false : value;
     });
 
     const isUrl = (openApiSpec.startsWith("https") || openApiSpec.startsWith("http"));
